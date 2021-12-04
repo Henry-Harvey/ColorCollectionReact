@@ -16,7 +16,7 @@ export default function App() {
   const retrieveColors = useCallback(() => {
     console.log("Retrieving all Colors");
     axios
-      .get("http://localhost:3000/colors")
+      .get("https://color-collection-express.herokuapp.com/colors")
       .then((colorsResponse) => {
         console.log("All Colors response", colorsResponse);
         if (colorsResponse?.data === "") {

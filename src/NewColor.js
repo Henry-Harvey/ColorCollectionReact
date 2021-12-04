@@ -25,7 +25,10 @@ export default function NewColor({ retrieveColors }) {
   const addColor = () => {
     console.log("Create Color", newColorState.color);
     axios
-      .post("http://localhost:3000/colors", newColorState.color)
+      .post(
+        "https://color-collection-express.herokuapp.com/colors",
+        newColorState.color
+      )
       .then((colorResponse) => {
         console.log("Color response", colorResponse);
         if (colorResponse?.data === "") {

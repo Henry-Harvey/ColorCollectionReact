@@ -18,7 +18,7 @@ export default function Color({ retrieveColors }) {
   const retrieveColor = useCallback(() => {
     console.log("Retrieve Color", id);
     axios
-      .get("http://localhost:3000/colors/" + id)
+      .get("https://color-collection-express.herokuapp.com/colors/" + id)
       .then((colorResponse) => {
         console.log("Color response", colorResponse);
         if (colorResponse?.data === "") {
@@ -52,7 +52,10 @@ export default function Color({ retrieveColors }) {
   const editColor = () => {
     console.log("Edit Color", colorState.color);
     axios
-      .patch("http://localhost:3000/colors", colorState.color)
+      .patch(
+        "https://color-collection-express.herokuapp.com/colors",
+        colorState.color
+      )
       .then((colorResponse) => {
         console.log("Color response", colorResponse);
         if (colorResponse?.data === "") {
@@ -70,7 +73,10 @@ export default function Color({ retrieveColors }) {
   const deleteColor = () => {
     console.log("Delete Color", colorState.color);
     axios
-      .delete("http://localhost:3000/colors/" + colorState.color.id)
+      .delete(
+        "https://color-collection-express.herokuapp.com/colors/" +
+          colorState.color.id
+      )
       .then((colorResponse) => {
         console.log("Color response", colorResponse);
         if (colorResponse?.data === "") {
