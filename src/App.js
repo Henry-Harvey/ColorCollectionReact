@@ -8,6 +8,7 @@ import Colors from "./Colors";
 import Color from "./Color";
 import NewColor from "./NewColor";
 
+// Component the contains the routes for each component. The colors used are loaded when this component is created.
 export default function App() {
   const [appState, setAppState] = useState({
     colors: [],

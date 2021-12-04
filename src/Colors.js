@@ -1,6 +1,7 @@
 import React from "react";
 import history from "./History";
 
+// Component for displaying a table of all the colors in the database. Each may be selected to see more info. There is also an add button for nabigating to the add color component
 export default function Colors({ colors }) {
   const selectColor = (color) => () => {
     history.push("/color/" + color.id);

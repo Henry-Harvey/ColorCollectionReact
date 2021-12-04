@@ -3,6 +3,7 @@ import axios from "axios";
 import history from "./History";
 import { useParams } from "react-router-dom";
 
+// Component for displaying a single color. There is a form for editting the color. There is also an option for deleting the color.
 export default function Color({ retrieveColors }) {
   let id = useParams().id;
 

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import history from "./History";
 
+// Component for displaying a form that can be submitted to create a new color in the database
 export default function NewColor({ retrieveColors }) {
   const [newColorState, setNewColorState] = useState({
     color: {
